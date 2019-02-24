@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="xjv-R4-6BE">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--게임-->
+        <scene sceneID="Wf6-mm-GUo">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="xjv-R4-6BE" customClass="KKBNavigationController" customModule="AppStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="게임" image="ic_game" id="182-v8-Y7V"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="adm-7K-gZc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="gJE-aW-8Al" kind="relationship" relationship="rootViewController" id="Vzk-gn-tHK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EXm-l3-W4U" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-681" y="140"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Xv8-hA-jms">
+            <objects>
+                <viewController id="gJE-aW-8Al" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7ZM-85-Eg4">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="게임" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O8l-dn-XOi">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="O8l-dn-XOi" firstAttribute="top" secondItem="Vg2-8x-9Cp" secondAttribute="top" id="CSR-j3-iYx"/>
+                            <constraint firstItem="O8l-dn-XOi" firstAttribute="leading" secondItem="Vg2-8x-9Cp" secondAttribute="leading" id="XhX-SW-y3d"/>
+                            <constraint firstItem="Vg2-8x-9Cp" firstAttribute="bottom" secondItem="O8l-dn-XOi" secondAttribute="bottom" id="Ygo-Y8-PNv"/>
+                            <constraint firstItem="Vg2-8x-9Cp" firstAttribute="trailing" secondItem="O8l-dn-XOi" secondAttribute="trailing" id="aOt-zB-22O"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Vg2-8x-9Cp"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="GO0-9X-03h"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="HbS-a6-gF5" id="0PP-nQ-PKN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nwU-aL-w6P" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="HbS-a6-gF5">
+                    <connections>
+                        <outlet property="delegate" destination="gJE-aW-8Al" id="OjU-Vr-C5M"/>
+                        <outlet property="searchContentsController" destination="gJE-aW-8Al" id="E4Q-Ca-NY8"/>
+                        <outlet property="searchResultsDataSource" destination="gJE-aW-8Al" id="aza-PU-rK9"/>
+                        <outlet property="searchResultsDelegate" destination="gJE-aW-8Al" id="uNR-pD-lWZ"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="161" y="140"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_game" width="36" height="36"/>
+    </resources>
+</document>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9KD-hm-7Oz">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--업데이트-->
+        <scene sceneID="tFv-z0-86N">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="9KD-hm-7Oz" customClass="KKBNavigationController" customModule="AppStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="업데이트" image="ic_update" id="Sjo-qN-22y"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XjC-30-puY">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="bpW-Cb-hxf" kind="relationship" relationship="rootViewController" id="23G-Vj-hi0"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2kk-P3-dij" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-681" y="140"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="XyD-30-qoB">
+            <objects>
+                <viewController id="bpW-Cb-hxf" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Klo-PT-ZTo">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="업데이트" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="moA-Wf-P6d">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UyS-3j-9H9" firstAttribute="trailing" secondItem="moA-Wf-P6d" secondAttribute="trailing" id="30g-ot-Wj4"/>
+                            <constraint firstItem="moA-Wf-P6d" firstAttribute="leading" secondItem="UyS-3j-9H9" secondAttribute="leading" id="M29-zy-FXO"/>
+                            <constraint firstItem="moA-Wf-P6d" firstAttribute="top" secondItem="UyS-3j-9H9" secondAttribute="top" id="YWL-z4-XNl"/>
+                            <constraint firstItem="UyS-3j-9H9" firstAttribute="bottom" secondItem="moA-Wf-P6d" secondAttribute="bottom" id="jHI-Iv-yQI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UyS-3j-9H9"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="yHn-eZ-VUN"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="tIR-3u-BlC" id="s6G-Om-skw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hof-pO-3Br" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="tIR-3u-BlC">
+                    <connections>
+                        <outlet property="delegate" destination="bpW-Cb-hxf" id="pCZ-Th-TMA"/>
+                        <outlet property="searchContentsController" destination="bpW-Cb-hxf" id="d0Y-fR-YyM"/>
+                        <outlet property="searchResultsDataSource" destination="bpW-Cb-hxf" id="dQt-SP-cJQ"/>
+                        <outlet property="searchResultsDelegate" destination="bpW-Cb-hxf" id="e1e-MR-k4R"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="161" y="140"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_update" width="36" height="36"/>
+    </resources>
+</document>

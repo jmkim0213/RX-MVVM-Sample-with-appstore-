@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8hH-rS-KkZ">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--앱-->
+        <scene sceneID="6jy-HI-Vht">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="8hH-rS-KkZ" customClass="KKBNavigationController" customModule="AppStore" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="앱" image="ic_app" id="hdx-54-wwf"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="8Od-De-LyJ">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="891-1H-7Z1" kind="relationship" relationship="rootViewController" id="xD6-D9-en4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nD0-z0-Iqk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-681" y="140"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="anw-XM-xMA">
+            <objects>
+                <viewController id="891-1H-7Z1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9hy-0w-6GV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="앱" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ExF-mi-FUH">
+                                <rect key="frame" x="0.0" y="20" width="375" height="598"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="1uf-ZN-8M4" firstAttribute="bottom" secondItem="ExF-mi-FUH" secondAttribute="bottom" id="5IW-S4-C91"/>
+                            <constraint firstItem="1uf-ZN-8M4" firstAttribute="trailing" secondItem="ExF-mi-FUH" secondAttribute="trailing" id="Kv9-s3-SJR"/>
+                            <constraint firstItem="ExF-mi-FUH" firstAttribute="top" secondItem="1uf-ZN-8M4" secondAttribute="top" id="XJe-Xg-VXX"/>
+                            <constraint firstItem="ExF-mi-FUH" firstAttribute="leading" secondItem="1uf-ZN-8M4" secondAttribute="leading" id="nRE-ZU-l7E"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1uf-ZN-8M4"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LHv-qX-a2e"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="Zpz-b1-ZNt" id="XBg-jL-gyv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2CU-Mi-zbF" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="Zpz-b1-ZNt">
+                    <connections>
+                        <outlet property="delegate" destination="891-1H-7Z1" id="WzV-pp-SD9"/>
+                        <outlet property="searchContentsController" destination="891-1H-7Z1" id="FH0-qy-oxj"/>
+                        <outlet property="searchResultsDataSource" destination="891-1H-7Z1" id="AOY-Qw-0bd"/>
+                        <outlet property="searchResultsDelegate" destination="891-1H-7Z1" id="i44-lx-9BB"/>
+                    </connections>
+                </searchDisplayController>
+            </objects>
+            <point key="canvasLocation" x="161" y="140"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="ic_app" width="36" height="36"/>
+    </resources>
+</document>
